@@ -16,7 +16,7 @@ export default {
   name: 'App',
   components: {
     HeaderComponent,
-    MainComponent
+    MainComponent,
     
   },
   data() {
@@ -28,6 +28,7 @@ export default {
     getMovies() {
       axios.get(this.store.apiUrl + this.store.endPoint.movie, this.store.options)
         .then((res) => {
+          this.store.movies = res.data.results;
           console.log(res.data.results);
         });
 
@@ -35,6 +36,7 @@ export default {
     getSeries() {
       axios.get(this.store.apiUrl + this.store.endPoint.series, this.store.options)
         .then((res) => {
+          this.store.series = res.data.results;
           console.log(res.data.results);
         });
 

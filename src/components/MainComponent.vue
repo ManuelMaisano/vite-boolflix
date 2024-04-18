@@ -1,6 +1,7 @@
 <template>
-    <main>
-        <div class="container">
+    <main >
+        <div class="container" >
+            <CardList/>
            
 
         </div>
@@ -8,8 +9,12 @@
 </template>
 
 <script>
+import CardList from './MainComponent/CardList.vue'
 export default {
     name: 'MainComponent',
+    components :{
+        CardList,
+    },
     data() {
         return {
 
@@ -24,7 +29,7 @@ export default {
 <style lang="scss" scoped>
 main{
     background-color:#080808 ;
-    height: 100vh;
+
     
     
 }
