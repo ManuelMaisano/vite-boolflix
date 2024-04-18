@@ -43,6 +43,7 @@ img {
 li {
     list-style: none;
     padding: 20px;
+    font-size: 20px;
 }
 
 
