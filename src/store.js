@@ -3,14 +3,14 @@ import {reactive}  from 'vue';
 export const store = reactive({
     apiUrl:' https://api.themoviedb.org/3/',
     endPoint:{
-        movie: 'serach/movie',
-        tv: 'search/tv'
+        movie: 'search/movie',
+        series: 'search/tv',
     },
-    option:{
+    options:{
         params: {
             api_key:'124c077917119b0d63e149d0a3b8c377',
-            query: 'a'
+            query: 'a',
 
-        }
+        },
     },
 });
