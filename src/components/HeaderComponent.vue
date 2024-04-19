@@ -1,7 +1,7 @@
 <template>
     <div id="header">
         <div class="d-flex align-items-center">
-            <img class="img-fluid" src="/public/images/netflix.jpg" alt="LogoNetflix">
+            <img class="img-fluid" src="/public/images/netflix.png" alt="LogoNetflix">
             <ul class="d-flex">
                 <li><a href="">Home</a></li>
                 <li><a href="#">Serie TV</a></li>

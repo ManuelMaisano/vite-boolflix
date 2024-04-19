@@ -2,9 +2,9 @@
     <footer>
         <div class=" container">
             <div class="icon">
-                <a href=""> <img class="img-fluid" src="/public/images/footer-facebook.png" alt="LogoFacebook"></a>
-                <a href=""> <img class="img-fluid" src="/public/images/footer-twitter.png" alt="LogoTwitter"></a>
-                <a href=""> <img class="img-fluid" src="/public/images/footer-youtube.png" alt="LogoYoutube"></a>
+                <a href=""> <img class="img-fluid" src="/public/images/facebook.png" alt="LogoFacebook"></a>
+                <a href=""> <img class="img-fluid" src="/public/images/twitter.png" alt="LogoTwitter"></a>
+                <a href=""> <img class="img-fluid" src="/public/images/youtube.png" alt="LogoYoutube"></a>
             </div>
 
             <div class="d-flex align-items-center ">
@@ -69,10 +69,12 @@ a:hover{
 
 img {
     color: white;
+    width: 70px;
 }
 
+
 .icon{
-    padding: 25px;
+    padding: 30px;
 }
 
 
@@ -91,5 +93,10 @@ button:hover{
 
 span{
     color: #808080;
+}
+span:hover{
+    color: white;
+    text-decoration: underline;
+
 }
 </style>
