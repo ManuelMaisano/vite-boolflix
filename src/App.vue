@@ -1,9 +1,9 @@
 <template>
   <div>
     <HeaderComponent />
-    <MainComponent />
+    <MainComponent   />
     <FooterComponent />
- 
+
   </div>
 </template>
 
@@ -19,7 +19,7 @@ export default {
     HeaderComponent,
     MainComponent,
     FooterComponent
-    
+
   },
   data() {
     return {
@@ -27,6 +27,7 @@ export default {
     };
   },
   methods: {
+    
     getMovies() {
       axios.get(this.store.apiUrl + this.store.endPoint.movie, this.store.options)
         .then((res) => {
@@ -41,20 +42,16 @@ export default {
           this.store.series = res.data.results;
           console.log(res.data.results);
         });
+    }
+  },
+  
 
-    },
-  },
-  created() {
-    this.getMovies();
-    this.getSeries();
-  },
+
+created() {
+  this.getMovies();
+ this.getSeries();
+},
 };
 </script>
 
-<style lang="scss" scoped>
-
-
-
-
-
-</style>
+<style lang="scss" scoped></style>

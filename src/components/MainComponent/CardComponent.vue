@@ -1,35 +1,73 @@
 <template>
-    <div>
-        <div class="card my-4" >
-        <img class="card-img-top" :src="image" :alt="title">
-        <div class="card-body">
-            <h5 class="card-title">{{ title }}</h5>
-            <p class="card-text">{{ description }}</p>
-            <p class="card-text">{{ language }}</p>
-            <p class="card-text">{{ vote }}</p>
+    <div class="flip-card">
+        <div class="flip-card-inner">
+
+            <div id="card-front" class="card">
+                <img :src="image" class="card-img-top" :alt="title">
+            </div>
+        </div>
+        <div id="card-back" class="card">
+            <div id="card" class="card-body d-flex flex-column justify-content-end align-items-center">
+                <h5>{{ title }}</h5>
+                <h6>{{ originalTitle }}</h6>
+                <p>{{ language }}</p>
+                <p>{{ vote }}</p>
+            </div>
         </div>
     </div>
-    </div>
+    
 </template>
 
 <script>
-    export default {
-        name: 'CardComponent',
-        props: [
-            'image',
-            'title',
-            'language',
-            'description',
-            'vote',
-        ]
-        
-    }
+export default {
+    name: 'CardComponent',
+    props: [
+        'image',
+        'title',
+        'language',
+        'description',
+        'vote',
+    ]
+
+}
 </script>
 
 <style lang="scss" scoped>
-#img {
-        min-height: 450px;
-
+.flip-card {
+        background-color: transparent;
+        width: 300px;
+        height: 300px;
+        perspective: 1000px;
+        margin-bottom: 190px;
+      }
+      
+      .flip-card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+      }
+      
+      .flip-card:hover .flip-card-inner {
+        transform: rotateY(180deg);
+      }
+      
+    #card-back {
+        color: black;
+        transform: rotateY(180deg);
+        min-height: 470px;
     }
-
+    #card-front, #card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+      }
+      img{
+        min-height: 470px;
+      }
 </style>

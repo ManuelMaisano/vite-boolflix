@@ -10,16 +10,23 @@
                 <li><a href="#">La mia lista</a></li>
                 <li><a href="#">Sfoglia per lingua</a></li>
             </ul>
+            <form class="form-inline d-flex ">
+                <input class="form-control mr-sm-2" type="search" placeholder="film,serietv.." aria-label="Search" >
+                <button class="btn">Search</button>
+            </form>
         </div>
 
     </div>
 </template>
 
 <script>
+import { store } from '../store.js';
 export default {
     name: 'HeaderComponent',
+    emits:['searchtitle'],
     data() {
         return {
+            store
 
         }
     }
@@ -31,6 +38,7 @@ export default {
 #header {
     height: 150px;
     background-color: #010101;
+    
 
 }
 
@@ -56,5 +64,10 @@ a {
     &:hover {
         color: lightgray;
     }
+}
+button{
+background-color: red;
+color: white;
+align-items: center;
 }
 </style>
